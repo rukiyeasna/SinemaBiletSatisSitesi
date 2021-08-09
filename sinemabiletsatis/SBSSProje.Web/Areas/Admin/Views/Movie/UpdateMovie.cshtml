@@ -1,0 +1,88 @@
+﻿@model MovieUpdateViewModel
+@{
+    ViewData["Title"] = "UpdateMovie";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<form asp-action="UpdateMovie" class="w-75 mx-auto p-3" method="post" enctype="multipart/form-data">
+    <input type="hidden" asp-for="MovieId" />
+    <div class="form-group">
+        <label asp-for="MovieName"></label>
+        <span asp-validation-for="MovieName" class="text-danger"></span>
+        <input asp-for="MovieName" type="text" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Director"></label>
+        <span asp-validation-for="Director" class="text-danger"></span>
+        <input asp-for="Director" type="text" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Cast"></label>
+        <span asp-validation-for="Cast" class="text-danger"></span>
+        <input asp-for="Cast" type="text" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Time"></label>
+        <span asp-validation-for="Time" class="text-danger"></span>
+        <input asp-for="Time" type="text" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Type"></label>
+        <span asp-validation-for="Type" class="text-danger"></span>
+        <input asp-for="Type" type="text" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Explanation"></label>
+        <span asp-validation-for="Explanation" class="text-danger"></span>
+        <textarea asp-for="Explanation" class="form-control"></textarea>
+    </div>
+    <div class="form-group">
+        <label asp-for="Trailer"></label>
+        <span asp-validation-for="Trailer" class="text-danger"></span>
+        <input asp-for="Trailer" type="text" class="form-control" />
+    </div>
+    <div class="form-group mt-2">
+        <div class="row">
+            <div class="col-md-4">
+                <div>
+                    <h5 class="text-center">Şuan ki resminiz</h5>
+                    <img src="~/img/@Model.Picture" class="w-100" style="height:10rem!important;" alt="@Model.MovieName">
+                </div>
+            </div>
+            <div class="col-md-2">
+
+            </div>
+            <div class="col-md-8">
+                <div id="alanOnizleme" style="display:none!important;">
+                    <h5 class="text-center">Seçtiğiniz resim:</h5>
+                    <img src="" id="resimOnizleme" class="w-100" style="height:10rem!important;" />
+                </div>
+            </div>
+            <div class="col-md-2">
+
+            </div>
+            <div class="col-md-12">
+                <label>Afiş :</label>
+                <input type="file" class="form-control-file" name="resim" id="Resim" />
+            </div>
+        </div>
+    </div>
+    <button asp-action="Index" asp-controller="Filmler" class="btn btn-warning btn-sm"><i class="fas fa-check mr-2"></i>Vazgeç</button>
+    <button type="submit" class="btn btn-primary btn-sm"><i class="fas fa-check mr-2"></i>Kaydet</button>
+
+</form>
+
+@section JavaScript{
+    <script src="~/lib/jquery/jqueryValidate/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery/jqueryUnob/jquery.validate.unobtrusive.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#Resim").change(function (e) {
+                $("#alanOnizleme").show();
+                $("#resimOnizleme").attr('src', URL.createObjectURL(e.target.files[0]));
+            });
+        });
+    </script>
+}
+
+

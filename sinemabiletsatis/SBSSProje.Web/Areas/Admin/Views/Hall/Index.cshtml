@@ -1,0 +1,52 @@
+﻿@model List<Hall>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+@if (Model.Count != 0)
+{
+    <a asp-action="AddHall" asp-controller="Hall" class="btn btn-sm btn-primary  my-2">Yeni Salon Ekle</a>
+    
+
+    <table class="table table-sm table-hover">
+        <thead>
+            <tr>
+           
+                <th>Adı</th>              
+                <th>Şube</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.HallName</td>
+                    <td>@item.Branch.BranchName</td>
+                  
+
+                    <td>
+                        <div>
+                            <a asp-action="UpdateBranch" asp-controller="Branch" asp-route-id="@item.BranchId" class="btn btn-primary btn-sm ">Düzenle</a>
+                        </div>
+                        <div>
+                            <a asp-action="DeleteBranch" asp-controller="Branch" asp-route-id="@item.BranchId" class="btn btn-primary btn-sm ">Sil</a>
+                        </div>
+
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <div class="text-center mt-4">
+        <p class="lead">Sistemde kayıtlı şube bulunamadı.</p>
+
+        <a asp-action="AddBranch" asp-controller="Branch" class="btn btn-sm btn-primary  my-2">Yeni Şube Ekle</a>
+    </div>
+}
+
+

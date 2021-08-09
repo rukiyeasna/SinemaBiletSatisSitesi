@@ -1,0 +1,32 @@
+﻿@model BranchListViewModel
+@{
+    ViewData["Title"] = "AddBranch";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<form class="w-75 mx-auto p-3" method="post">
+    <div class="form-group">
+        <label asp-for="BranchName"></label>
+        <span asp-validation-for="BranchName" class="text-danger"></span>
+        <input asp-for="BranchName" type="text" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="City"></label>
+        <span asp-validation-for="City" class="text-danger"></span>
+        <input asp-for="City" type="text" class="form-control" />
+        <div class="form-group">
+            <label asp-for="Address"></label>
+            <span asp-validation-for="Address" class="text-danger"></span>
+            <textarea asp-for="Address" class="form-control"></textarea>
+        </div>
+    </div>
+
+
+    <button type="submit" class="btn btn-primary btn-sm">Kaydet</button>
+</form>
+
+@section JavaScript{
+    <script src="~/lib/jquery/jqueryValidate/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery/jqueryUnob/jquery.validate.unobtrusive.min.js"></script>
+}
+

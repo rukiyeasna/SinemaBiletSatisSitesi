@@ -1,0 +1,48 @@
+﻿@model MovieViewModel
+@{
+    ViewData["Title"] = "Movieinformation";
+    Layout = "~/Areas/Member/Views/Shared/_MemberLayout.cshtml";
+}
+
+<div id="biletalicerik" style="position:relative;">
+    <input type="hidden" asp-for="MovieId" />
+    <div id="filmresim"><img src="~/img/@Model.Picture" /></div>
+    <div id="filmisim">@Model.MovieName</div>
+    <div id="filmtarih">@Model.Date.ToString("D")</div>
+    <div id="filmyonetmen">Yönetmen : @Model.Director</div>
+    <div id="filmoyuncular">Oyuncular : @Model.Cast</div>
+    <div id="filmsure"><img src="~/img/zamanicon.png" width="20" height="20">@Model.Time</div>
+    <div id="filmetiket">@Model.Type</div>
+    <a asp-action="Deneme" asp-controller="Bilet" asp-route-id="@Model.MovieId"><div id="biletinial">Biletini Al</div></a>
+</div>
+
+<link href="~/lib/twitter-bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+<script src="~/lib/twitter-bootstrap/js/bootstrap.min.js"></script>
+<script src="~/lib/twitter-bootstrap/js/bootstrap.bundle.min.js"></script>
+
+@*<div style="position: absolute; height: 100px; width: 100%; border: 1px solid red;">*@
+<div class="karetab">
+    <ul class="nav nav-tabs">
+        <li class="active"><a data-toggle="tab" href="#home">Açıklama</a></li>
+        <li> <a data-toggle="tab" href="#menu1">Fragman</a></li>
+        <li> <a data-toggle="tab" href="#menu2">Yorumlar</a></li>
+    </ul>
+    <div class="tab-content">
+        <div id="home" class="tab-pane fade in active">
+            <h3></h3>
+            <p>@Model.Explanation</p>
+        </div>
+        <div id="menu1" class="tab-pane fade">
+            <h3></h3>
+            <video src="@Model.Trailer" controls autoplay></video>
+        </div>
+        <div id="menu2" class="tab-pane fade ">
+            <h3></h3>
+            <p>Some dckshbgku</p>
+        </div>
+    </div>
+
+</div>
+
+
+

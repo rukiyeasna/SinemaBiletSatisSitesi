@@ -1,0 +1,129 @@
+﻿@model List<MovieListViewModel>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+@if (Model.Count != 0)
+{
+    <a asp-action="AddMovie" asp-controller="Movie" class="btn btn-sm btn-primary  my-2">Yeni Film Ekle</a>
+    @*<a asp-action="AddSession" asp-controller="Session" class="btn btn-primary btn-sm ">Seans Bilgileri</a>*@
+
+    <table class="table table-sm table-hover">
+        <thead>
+            <tr>
+                <th>Afiş</th>
+                <th>Ad</th>
+                <th>Yönetmen</th>
+                <th>Oyuncular</th>
+                <th>Süre</th>
+                <th>Etiket</th>
+                <th>Açıklama</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        <div>
+                            <img src="~/img/@item.Picture" width="150" height="200">
+                        </div>
+                    </td>
+                    <td>@item.MovieName</td>
+                    @*<td>@item.Tarih.ToString("D")</td>*@
+                    <td>@item.Director</td>
+                    <td>@item.Cast</td>
+                    <td>@item.Time</td>
+                    <td>@item.Type</td>
+                    <td>@item.Explanation</td>
+
+
+                    <td>
+                        <div>
+                            <a asp-action="UpdateMovie" asp-controller="Movie" asp-route-id="@item.MovieId" class="btn btn-primary btn-sm ">Düzenle</a>
+                        </div>
+                        <br />
+                        <div>
+                            @*<a asp-action="DeleteMovie" asp-controller="Movie" onclick="return confirm('Silmek istediğinizden emin misiniz?')">Sil</a>*@
+                            @*<a href="" data-toggle="modal" data-target="#silmeEkrani" data-abc="@item.MovieId" class="btn btn-warning btn-sm mt-2">Sil</a>*@
+                            @*Html.ActionLink("Sil", "SilFilmi", new { id = @item.FilmId }, new { @class = "btn btn-danger", onclick = "return confirm('Silmek istediğinize emin isiniz?')" })*@
+                            <a asp-action="DeleteMovie" asp-controller="Movie" asp-route-id="@item.MovieId" class="btn btn-primary btn-sm ">Kaldır</a>
+                        </div>
+
+                    </td>
+
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+else
+{
+    <div class="text-center mt-4">
+        <p class="lead">Sistemde kayıtlı film bulunamadı.</p>
+
+        <a asp-action="AddMovie" asp-controller="Movie" class="btn btn-sm btn-primary  my-2">Yeni Film Ekle</a>
+    </div>
+}
+
+@*<a asp-action="BilgileriEkle" asp-controller="FilmBilgileri">Genel Bilgileri Ekle</a>*@
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="silmeEkrani" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Uyarı</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Silmek istediğinizden emin misiniz?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Vazgeç</button>
+                <button id="btnSil" type="button" class="btn btn-primary">Sil</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section JavaScript
+{
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#silmeEkrani").on("show.bs.modal", function (event) {
+                let tetikleyenelement = $(event.releatedTarget);
+                let id = tetikleyenelement.data("abc");
+
+                $("#btnSil").click(function () {
+                    $.ajax({
+                        type: "Post",
+                        url: "./Movie/DeleteMovie",
+                        data: { id: id },
+                        dataType: "json",
+                        contentType: "application/json; charset=utf-8;",
+                        success: function () {
+                            window.location.reload();
+                        },
+                        error: function (error) {
+                            alert(error.statusText);
+                        }
+                    })
+                });
+            })
+
+        });
+    </script>
+}
+
+

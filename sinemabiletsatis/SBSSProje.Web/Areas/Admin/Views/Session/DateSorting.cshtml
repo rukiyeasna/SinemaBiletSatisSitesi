@@ -1,0 +1,40 @@
+﻿@model List<MBH>
+@{
+    ViewData["Title"] = "DateSorting";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+    <p>
+        Tarihe Göre Arama: @Html.TextBox("p")
+        <input type="submit" value="Ara" />
+    </p>
+}
+
+<table class="table table-sm table-hover">
+    <thead>
+        <tr>
+            <th>Film Adı</th>
+            <th>Şube</th>
+            <th>Seans</th>
+            <th>Tarih</th>
+            <th>Saat</th>
+      </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>  
+                </td>
+                <td>@item.Movie.MovieName</td>
+                @*<td>@item.Tarih.ToString("D")</td>*@
+                <td>@item.Branch.BranchName</td>
+                <td>@item.Hall.HallName</td>
+                <td>@item.Date</td>
+                <td>@item.Hour</td>
+            </tr>
+        }
+    </tbody>
+</table>

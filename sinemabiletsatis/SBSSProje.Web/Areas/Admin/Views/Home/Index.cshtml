@@ -1,0 +1,45 @@
+﻿@model List<MBH>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+@if (Model.Count != 0)
+{
+    <a asp-action="AddSession" asp-controller="Session" class="btn btn-sm btn-primary  my-2">Yeni Seans Ekle</a>
+    <table class="table table-sm table-hover">
+        <thead>
+            <tr>
+                <th>Film</th>
+                <th>Şube</th>
+                <th>Salon</th>
+                <th>Tarih</th>
+                <th>Saat</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Movie.MovieName</td>
+                    <td>@item.Branch.BranchName (@item.Branch.City)</td>
+                    <td>@item.Hall.HallName</td>
+                    <td>@item.Date.ToString("D")</td>
+                    <td>@item.Hour</td>
+
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+else
+{
+    <div class="text-center mt-4">
+        <p class="lead">Sistemde kayıtlı seans bulunamadı.</p>
+
+        <a asp-action="AddSession" asp-controller="Session" class="btn btn-sm btn-primary  my-2">Yeni Seans Ekle</a>
+    </div>
+}
+

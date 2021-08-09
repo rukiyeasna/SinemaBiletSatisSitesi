@@ -1,0 +1,109 @@
+﻿@model List<SBSSProje.Entities.Concrete.MBH>
+@{
+    ViewData["Title"] = "koltukDeneme";
+    Layout = "~/Areas/Member/Views/Shared/_MemberLayout.cshtml";
+}
+
+@foreach (var item in Model)
+{
+    <div id="filmbilgi">
+        <div id="seansbilgi">
+            <a asp-action="MovieInformation2" asp-controller="Home" asp-route-id="@item.MovieId"><div id="filmimg"><img src="~/img/@item.Movie.Picture" width="100%" height="100%" /></div></a>
+            <div id="filmname">@item.Movie.MovieName</div>
+            <div id="filmsube">@item.Branch.BranchName (@item.Branch.City)</div>
+            <div id="filmsalon">@item.Hall.HallName</div>
+            <div id="filmtarih">@item.Date.ToString("D")</div>
+            <div id="filmsaat">@item.Hour</div>
+        </div>
+    </div>
+
+}
+
+
+<div id="koltukdiv">
+
+    @for (int i = 1; i < 19; i++)
+    {
+        <button type="button" class="koltuk">L @i</button>
+    }
+
+    <br />
+
+    @for (int i = 1; i < 19; i++)
+    {
+        <button type="button" asp-route-deger="" class="koltuk">K @i</button>
+    }
+
+    <br />
+
+    @for (int i = 1; i < 19; i++)
+    {
+        <button type="button" value="j @i" class="koltuk">J @i</button>
+    }
+
+    <br />
+
+    @for (int i = 1; i < 19; i++)
+    {
+        <button type="button" class="koltuk">I @i</button>
+    }
+
+    <br />
+
+    @for (int i = 1; i < 19; i++)
+    {
+        <button type="button" class="koltuk">H @i</button>
+    }
+
+    <br />
+
+    @for (int i = 1; i < 19; i++)
+    {
+        <button type="button" class="koltuk">G @i</button>
+    }
+
+    <br />
+
+    @for (int i = 1; i < 19; i++)
+    {
+        <button type="button" class="koltuk">F @i</button>
+    }
+
+    <br />
+
+    @for (int i = 1; i < 19; i++)
+    {
+        <button type="button" class="koltuk">E @i</button>
+    }
+
+    <br />
+
+    @for (int i = 1; i < 19; i++)
+    {
+        <button type="button" class="koltuk">D @i</button>
+    }
+
+    <br />
+
+    @for (int i = 1; i < 19; i++)
+    {
+        <button type="button" class="koltuk">C @i</button>
+    }
+
+    <br />
+
+    @for (int i = 1; i < 19; i++)
+    {
+        <button type="button" class="koltuk">B @i</button>
+    }
+
+    <br />
+
+    @for (int i = 1; i < 19; i++)
+    {
+        <button class="koltuk">A @i</button>
+    }
+
+</div>
+
+<div id="perde">PERDE</div>

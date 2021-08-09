@@ -1,0 +1,14 @@
+C:\Users\casper\Desktop\SİNEMA\SINEMABILETSATIS\sinemabiletsatis\SBSSProje.Business\bin\Debug\netcoreapp3.1\SBSSProje.Business.deps.json
+C:\Users\casper\Desktop\SİNEMA\SINEMABILETSATIS\sinemabiletsatis\SBSSProje.Business\bin\Debug\netcoreapp3.1\SBSSProje.Business.dll
+C:\Users\casper\Desktop\SİNEMA\SINEMABILETSATIS\sinemabiletsatis\SBSSProje.Business\bin\Debug\netcoreapp3.1\SBSSProje.Business.pdb
+C:\Users\casper\Desktop\SİNEMA\SINEMABILETSATIS\sinemabiletsatis\SBSSProje.Business\bin\Debug\netcoreapp3.1\SBSSProje.DataAccess.dll
+C:\Users\casper\Desktop\SİNEMA\SINEMABILETSATIS\sinemabiletsatis\SBSSProje.Business\bin\Debug\netcoreapp3.1\SBSSProje.Entities.dll
+C:\Users\casper\Desktop\SİNEMA\SINEMABILETSATIS\sinemabiletsatis\SBSSProje.Business\bin\Debug\netcoreapp3.1\SBSSProje.DataAccess.pdb
+C:\Users\casper\Desktop\SİNEMA\SINEMABILETSATIS\sinemabiletsatis\SBSSProje.Business\bin\Debug\netcoreapp3.1\SBSSProje.Entities.pdb
+C:\Users\casper\Desktop\SİNEMA\SINEMABILETSATIS\sinemabiletsatis\SBSSProje.Business\obj\Debug\netcoreapp3.1\SBSSProje.Business.csprojAssemblyReference.cache
+C:\Users\casper\Desktop\SİNEMA\SINEMABILETSATIS\sinemabiletsatis\SBSSProje.Business\obj\Debug\netcoreapp3.1\SBSSProje.Business.AssemblyInfoInputs.cache
+C:\Users\casper\Desktop\SİNEMA\SINEMABILETSATIS\sinemabiletsatis\SBSSProje.Business\obj\Debug\netcoreapp3.1\SBSSProje.Business.AssemblyInfo.cs
+C:\Users\casper\Desktop\SİNEMA\SINEMABILETSATIS\sinemabiletsatis\SBSSProje.Business\obj\Debug\netcoreapp3.1\SBSSProje.Business.csproj.CoreCompileInputs.cache
+C:\Users\casper\Desktop\SİNEMA\SINEMABILETSATIS\sinemabiletsatis\SBSSProje.Business\obj\Debug\netcoreapp3.1\SBSSProje.Business.csproj.CopyComplete
+C:\Users\casper\Desktop\SİNEMA\SINEMABILETSATIS\sinemabiletsatis\SBSSProje.Business\obj\Debug\netcoreapp3.1\SBSSProje.Business.dll
+C:\Users\casper\Desktop\SİNEMA\SINEMABILETSATIS\sinemabiletsatis\SBSSProje.Business\obj\Debug\netcoreapp3.1\SBSSProje.Business.pdb

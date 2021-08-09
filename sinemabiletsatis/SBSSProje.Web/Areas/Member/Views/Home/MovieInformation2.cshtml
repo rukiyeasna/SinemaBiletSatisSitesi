@@ -1,0 +1,62 @@
+﻿@model List<SBSSProje.Entities.Concrete.MBH>
+@{
+    ViewData["Title"] = "MovieInformation2";
+    Layout = "~/Areas/Member/Views/Shared/_MemberLayout.cshtml";
+}
+
+
+<div id="biletalicerik" style="position:relative;">
+    @*<input type="hidden" asp-for="@ViewBag.id" />*@
+    <div id="filmresim"><img src="~/img/@ViewBag.Picture" /></div>
+    <div id="filmisim">@ViewBag.MovieName</div>
+    <div id="filmtarih">@ViewBag.Date.ToString("D")</div>
+    <div id="filmyonetmen">Yönetmen : @ViewBag.Director</div>
+    <div id="filmoyuncular">Oyuncular : @ViewBag.Cast</div>
+    <div id="filmsure"><img src="~/img/zamanicon.png" width="20" height="20">@ViewBag.Time</div>
+    <div id="filmetiket">@ViewBag.Type</div>
+    <a href="#bc"><div id="biletinial">Biletini Al</div></a>
+</div>
+
+<div id="karetab">
+    <ul class="nav nav-tabs">
+        <li class="active active"><a data-toggle="tab" href="#home">Açıklama</a></li>
+        <li> <a data-toggle="tab" href="#menu1">Fragman</a></li>
+        @*<li> <a data-toggle="tab" href="#menu2">Yorumlar</a></li>*@
+    </ul>
+    <div class="tab-content">
+        <div id="home" class="tab-pane fade in active">
+            <h3></h3>
+            <p>@ViewBag.Explanation</p>
+        </div>
+        <div id="menu1" class="tab-pane fade">
+            <h3></h3>
+            @*<video src="@ViewBag.Trailer" controls autoplay></video>*@
+        <iframe width="560" height="315" src="@ViewBag.Trailer" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            
+        </div>
+        @*<div id="menu2" class="tab-pane fade ">
+            <h3></h3>
+            <p>Some dckshbgku</p>
+        </div>*@
+    </div>
+
+</div>
+
+<link href="~/bootswatch/bootstrap.min.css" rel="stylesheet" />
+<script src="~/lib/twitter-bootstrap/js/bootstrap.min.js"></script>
+<script src="~/lib/twitter-bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+@foreach (var item in Model)
+{
+    
+      <div id="seansbilgi">
+        <div class="sbyazi" id="bc">@item.Branch.BranchName (@item.Branch.City)</div>
+        <div class="sbyazi">@item.Hall.HallName</div>
+        <div class="sbyazi">@item.Date.ToString("D")</div>
+        <a asp-action="koltukDeneme" asp-controller="Home" asp-route-id="@item.Id" ><button id="saatB"> @item.Hour</button></a>
+                @*<td>@item.Movie.MovieName</td>*@
+      </div>  
+
+}
+

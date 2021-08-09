@@ -1,0 +1,63 @@
+﻿
+@{
+    ViewData["Title"] = "DenemeTabs";
+    Layout = "~/Areas/Member/Views/Shared/_MemberLayout.cshtml";
+}
+<link href="~/bootswatch/bootstrap.min.css" rel="stylesheet" />
+<script src="~/lib/twitter-bootstrap/js/bootstrap.min.js"></script>
+<script src="~/lib/twitter-bootstrap/js/bootstrap.bundle.min.js"></script>
+@*<ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a class="nav-link active" href="#">Active</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link disabled" href="#">Disabled</a>
+        </li>
+    </ul>*@
+
+@*<ul class="nav nav-pills">
+        <li class="nav-item">
+            <a class="nav-link active" href="#">Active</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link disabled" href="#">Disabled</a>
+        </li>
+    </ul>*@
+
+<ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
+    <li> <a data-toggle="tab" href="#menu1">Menu 1</a></li>
+    <li> <a data-toggle="tab" href="#menu2">Menu 2</a></li>
+</ul>
+
+
+<div class="tab-content">
+    <div id="home" class="tab-pane fade in active">
+        <h3>Home</h3>
+        <p>Some dckshbgku</p>
+    </div>
+    <div id="menu1" class="tab-pane fade">
+        <h3>Menu 1</h3>
+        <p>Some dckshbgku</p>
+    </div>
+    <div id="menu2" class="tab-pane fade ">
+        <h3>Menu 2</h3>
+        <p>Some dckshbgku</p>
+    </div>
+</div>
+
+
+
+

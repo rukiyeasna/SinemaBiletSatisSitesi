@@ -1,0 +1,22 @@
+﻿@model AppUserListViewModel
+@{
+    string active = string.Empty;
+    if (TempData["Active"] != null)
+    {
+        active = TempData["Active"].ToString();
+    }
+}
+<div class="border-right" id="sidebar-wrapper">
+    <div class="sidebar-heading">
+        <img src="~/img/@Model.Picture" width="200" height="200" alt="@Model.Name" />
+        <h5>@Model.Name @Model.Surname</h5>
+    </div>
+    <div class="list-group list-group-flush">
+        <a asp-action="Index" asp-controller="Home" class="list-group-item list-group-item-action @(active=="home"?"active":"")"><i class="fas fa-video mr-2"></i>Seanslar</a>
+        <a asp-action="Index" asp-controller="Movie" class="list-group-item list-group-item-action @(active=="movies"?"active":"")"><i class="fas fa-film mr-2"></i>Filmler</a>
+        <a asp-action="Index" asp-controller="Branch" class="list-group-item list-group-item-action @(active=="branches"?"active":"")"><i class="fas fa-store mr-2"></i>Şube & Salon</a>
+        <a asp-action="Index" asp-controller="Branch" class="list-group-item list-group-item-action @(active==""?"active":"")"><i class="fas fa-ticket-alt mr-2"></i>Satışlar</a>
+        <a asp-action="Index" asp-controller="Profile" class="list-group-item list-group-item-action @(active=="profil"?"active":"")"><i class="fas fa-user-circle mr-2"></i>Profilim</a>
+        <a asp-area="" asp-action="CikisYap" asp-controller="Home" class="list-group-item list-group-item-action "><i class="fas fa-sign-out-alt mr-2"></i>Çıkış Yap</a>
+    </div>
+</div>

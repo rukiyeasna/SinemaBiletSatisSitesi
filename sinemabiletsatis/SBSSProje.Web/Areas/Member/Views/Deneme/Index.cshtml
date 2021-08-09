@@ -1,0 +1,46 @@
+﻿@model List<SBSSProje.Entities.Concrete.MBH>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Member/Views/Shared/_MemberLayout.cshtml";
+}
+
+<table class="table table-bordered">
+    <thead style="background-color:aliceblue">
+        <tr>
+            <th>Şube</th>
+            <th>Salon</th>
+            <th>Tarih</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <div id="biletalicerik" style="position:relative;">
+            @*<input type="hidden" asp-for="@ViewBag.id" />*@
+            <div id="filmresim"><img src="~/img/@ViewBag.Picture" /></div>
+            <div id="filmisim">@ViewBag.MovieName</div>
+            <div id="filmtarih">@ViewBag.Date.ToString("D")</div>
+            <div id="filmyonetmen">Yönetmen : @ViewBag.Director</div>
+            <div id="filmoyuncular">Oyuncular : @ViewBag.Cast</div>
+            <div id="filmsure"><img src="~/img/zamanicon.png" width="20" height="20">@ViewBag.Time</div>
+            <div id="filmetiket">@ViewBag.Type</div>
+            <a asp-action="Deneme" asp-controller="Bilet" asp-route-id="@ViewBag.id"><div id="biletinial">Biletini Al</div></a>
+        </div>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                @*<td><input type="hidden" asp-for="@item.FilmId" /></td>*@
+                @*<td><div>@item.FilmId</div></td>*@
+                @*<td><div>@item.BranchId</div></td>*@
+                <td>@item.Branch.BranchName</td>
+
+                @*<td><div>@item.HallId</div></td>*@
+                <td>@item.Hall.HallName</td>
+                <td>@item.Date.ToString("D")</td>
+                <td>@item.Movie.MovieName</td>
+            </tr>
+
+
+        }
+    </tbody>
+</table>

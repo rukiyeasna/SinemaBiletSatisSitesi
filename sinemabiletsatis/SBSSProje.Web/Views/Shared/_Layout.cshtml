@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/bootswatch/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/TemplateMember/css/MemberStyle.css" rel="stylesheet" />
+
+</head>
+<body>
+    <header id="header">
+        <div id="logo">
+            <img src="~/TemplateMember/images/rrrrr.png" width="100" height="150" />
+        </div>
+
+        <div id="logoyazi">#biletinisec</div>
+
+        <div id="menu">
+            <a href="@Url.Action("Index","Home")"><div class="menuyazi">ANASAYFA</div></a>
+            <a href="@Url.Action("Hakkimizda","Menu")"><div class="menuyazi">HAKKIMIZDA</div></a>
+            <a href="@Url.Action("Iletisim","Menu")"><div class="menuyazi">İLETİŞİM</div></a>
+            <a href="@Url.Action("Subelerimiz","Menu")"><div class="menuyazi">ŞUBELER</div></a>
+        </div>
+
+
+
+    </header>
+    <div>
+        @RenderBody()
+    </div>
+    @*<div id="footer">
+            <div>
+                <div>
+                    <a href="http://freewebsitetemplates.com/go/twitter/" target="_blank" id="twitter">Twitter</a>
+                    <a href="http://freewebsitetemplates.com/go/facebook/" target="_blank" id="facebook">Facebook</a>
+                    <a href="http://freewebsitetemplates.com/go/googleplus/" target="_blank" id="googleplus">Google&#43;</a>
+                </div>
+                <p>
+                    &copy; Copyright 2012. All rights reserved
+                </p>
+            </div>
+        </div>*@
+    <script src="~/lib/jquery/jquery.min.js"></script>
+    <script src="~/Template/startbootstrap-simple-sidebar-gh-pages/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="~/lib/jquery/jqueryValidate/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery/jqueryUnob/jquery.validate.unobtrusive.min.js"></script>
+</body>
+</html>

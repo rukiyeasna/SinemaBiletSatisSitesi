@@ -1,0 +1,54 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>@ViewBag.Title</title>
+
+    <link href="~/TemplateMember/css/MemberStyle.css" rel="stylesheet" />
+  
+</head>
+<body>
+    <header id="header">
+        <div id="logo">
+            <a asp-action="Index" asp-controller="Home"><img src="~/TemplateMember/images/rrrrr.png" /></a>
+        </div>
+
+        <a asp-action="Index" asp-controller="Home"><div id="logoyazi">#biletinisec</div></a>
+
+        <div id="menu">
+            <div>
+                <a asp-action="Index" asp-controller="Home"><div class="menuyazi">ANASAYFA</div></a>
+                <a asp-action="Hakkimizda" asp-controller="Menu"><div class="menuyazi">HAKKIMIZDA</div></a>
+                <a asp-action="Iletisim" asp-controller="Menu"><div class="menuyazi">İLETİŞİM</div></a>
+                <a asp-action="Subelerimiz" asp-controller="Menu"><div class="menuyazi">ŞUBELER</div></a>
+            </div>
+        </div>
+        <div id="girismenu">
+            <a asp-action="Index" asp-controller="Profile"><div>Profil</div></a>
+        </div>
+
+    </header>
+
+    <div>
+        @RenderBody()
+    </div>
+
+
+    @*<div id="footer">
+            <div>
+                <div>
+                    <a href="http://freewebsitetemplates.com/go/twitter/" target="_blank" id="twitter">Twitter</a>
+                    <a href="http://freewebsitetemplates.com/go/facebook/" target="_blank" id="facebook">Facebook</a>
+                    <a href="http://freewebsitetemplates.com/go/googleplus/" target="_blank" id="googleplus">Google&#43;</a>
+                </div>
+                <p>
+
+                </p>
+            </div>
+        </div>*@
+    <script src="~/Template/startbootstrap-simple-sidebar-gh-pages/vendor/jquery/jquery.min.js"></script>
+    <script src="~/Template/startbootstrap-simple-sidebar-gh-pages/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/lib/fontAwesome/js/all.min.js"></script>
+</body>
+</html>

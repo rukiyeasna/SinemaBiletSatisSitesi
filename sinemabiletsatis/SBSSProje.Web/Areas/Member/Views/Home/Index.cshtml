@@ -1,0 +1,26 @@
+﻿@model List<MovieViewModel>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Member/Views/Shared/_MemberLayout.cshtml";
+}
+
+<div>
+    <div>
+        @foreach (var item in Model)
+        {
+            <div>
+                <div class="filmler">
+                    <a asp-action="MovieInformation2" asp-controller="Home" asp-route-id="@item.MovieId"><img src="~/img/@item.Picture" width="300" height="400"></a>
+                    <div class="flex fluid type"><span>@item.Type</span></div>
+                    <div><strong>@item.MovieName</strong></div>
+                    
+                    <a href="@item.Trailer"><div id="fragmanizle">Fragmanı İzle</div></a>
+                    <a asp-action="MovieInformation2" asp-controller="Home" asp-route-id="@item.MovieId"><div id="biletal">Bilet Al</div></a>
+                   
+                </div>
+            </div>
+        }
+    </div>
+
+</div>
+

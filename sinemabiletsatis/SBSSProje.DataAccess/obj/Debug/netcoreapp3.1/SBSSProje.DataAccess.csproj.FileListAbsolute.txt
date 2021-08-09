@@ -1,0 +1,15 @@
+C:\Users\casper\Desktop\SİNEMA\SINEMABILETSATIS\sinemabiletsatis\SBSSProje.DataAccess\bin\Debug\netcoreapp3.1\SBSSProje.Entities.dll
+C:\Users\casper\Desktop\SİNEMA\SINEMABILETSATIS\sinemabiletsatis\SBSSProje.DataAccess\obj\Debug\netcoreapp3.1\SBSSProje.DataAccess.csprojAssemblyReference.cache
+C:\Users\casper\Desktop\SİNEMA\SINEMABILETSATIS\sinemabiletsatis\SBSSProje.DataAccess\obj\Debug\netcoreapp3.1\SBSSProje.DataAccess.AssemblyInfoInputs.cache
+C:\Users\casper\Desktop\SİNEMA\SINEMABILETSATIS\sinemabiletsatis\SBSSProje.DataAccess\obj\Debug\netcoreapp3.1\SBSSProje.DataAccess.AssemblyInfo.cs
+C:\Users\casper\Desktop\SİNEMA\SINEMABILETSATIS\sinemabiletsatis\SBSSProje.DataAccess\bin\Debug\netcoreapp3.1\SBSSProje.DataAccess.deps.json
+C:\Users\casper\Desktop\SİNEMA\SINEMABILETSATIS\sinemabiletsatis\SBSSProje.DataAccess\bin\Debug\netcoreapp3.1\SBSSProje.DataAccess.runtimeconfig.json
+C:\Users\casper\Desktop\SİNEMA\SINEMABILETSATIS\sinemabiletsatis\SBSSProje.DataAccess\bin\Debug\netcoreapp3.1\SBSSProje.DataAccess.runtimeconfig.dev.json
+C:\Users\casper\Desktop\SİNEMA\SINEMABILETSATIS\sinemabiletsatis\SBSSProje.DataAccess\bin\Debug\netcoreapp3.1\SBSSProje.DataAccess.dll
+C:\Users\casper\Desktop\SİNEMA\SINEMABILETSATIS\sinemabiletsatis\SBSSProje.DataAccess\bin\Debug\netcoreapp3.1\SBSSProje.DataAccess.pdb
+C:\Users\casper\Desktop\SİNEMA\SINEMABILETSATIS\sinemabiletsatis\SBSSProje.DataAccess\bin\Debug\netcoreapp3.1\SBSSProje.Entities.pdb
+C:\Users\casper\Desktop\SİNEMA\SINEMABILETSATIS\sinemabiletsatis\SBSSProje.DataAccess\obj\Debug\netcoreapp3.1\SBSSProje.DataAccess.csproj.CopyComplete
+C:\Users\casper\Desktop\SİNEMA\SINEMABILETSATIS\sinemabiletsatis\SBSSProje.DataAccess\obj\Debug\netcoreapp3.1\SBSSProje.DataAccess.dll
+C:\Users\casper\Desktop\SİNEMA\SINEMABILETSATIS\sinemabiletsatis\SBSSProje.DataAccess\obj\Debug\netcoreapp3.1\SBSSProje.DataAccess.pdb
+C:\Users\casper\Desktop\SİNEMA\SINEMABILETSATIS\sinemabiletsatis\SBSSProje.DataAccess\obj\Debug\netcoreapp3.1\SBSSProje.DataAccess.genruntimeconfig.cache
+C:\Users\casper\Desktop\SİNEMA\SINEMABILETSATIS\sinemabiletsatis\SBSSProje.DataAccess\obj\Debug\netcoreapp3.1\SBSSProje.DataAccess.csproj.CoreCompileInputs.cache

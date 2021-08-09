@@ -1,0 +1,9 @@
+C:\Users\casper\Desktop\SİNEMA\SINEMABILETSATIS\sinemabiletsatis\SBSSProje.Entities\bin\Debug\netcoreapp3.1\SBSSProje.Entities.deps.json
+C:\Users\casper\Desktop\SİNEMA\SINEMABILETSATIS\sinemabiletsatis\SBSSProje.Entities\bin\Debug\netcoreapp3.1\SBSSProje.Entities.dll
+C:\Users\casper\Desktop\SİNEMA\SINEMABILETSATIS\sinemabiletsatis\SBSSProje.Entities\bin\Debug\netcoreapp3.1\SBSSProje.Entities.pdb
+C:\Users\casper\Desktop\SİNEMA\SINEMABILETSATIS\sinemabiletsatis\SBSSProje.Entities\obj\Debug\netcoreapp3.1\SBSSProje.Entities.csprojAssemblyReference.cache
+C:\Users\casper\Desktop\SİNEMA\SINEMABILETSATIS\sinemabiletsatis\SBSSProje.Entities\obj\Debug\netcoreapp3.1\SBSSProje.Entities.AssemblyInfoInputs.cache
+C:\Users\casper\Desktop\SİNEMA\SINEMABILETSATIS\sinemabiletsatis\SBSSProje.Entities\obj\Debug\netcoreapp3.1\SBSSProje.Entities.AssemblyInfo.cs
+C:\Users\casper\Desktop\SİNEMA\SINEMABILETSATIS\sinemabiletsatis\SBSSProje.Entities\obj\Debug\netcoreapp3.1\SBSSProje.Entities.dll
+C:\Users\casper\Desktop\SİNEMA\SINEMABILETSATIS\sinemabiletsatis\SBSSProje.Entities\obj\Debug\netcoreapp3.1\SBSSProje.Entities.pdb
+C:\Users\casper\Desktop\SİNEMA\SINEMABILETSATIS\sinemabiletsatis\SBSSProje.Entities\obj\Debug\netcoreapp3.1\SBSSProje.Entities.csproj.CoreCompileInputs.cache
